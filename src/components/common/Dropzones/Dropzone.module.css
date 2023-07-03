@@ -1,0 +1,14 @@
+.img {
+    width: 100%;
+}
+
+.dropImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    color: gray;
+    height: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+}

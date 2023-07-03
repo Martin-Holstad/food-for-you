@@ -1,0 +1,33 @@
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.normal {
+    border-color: #fff;
+    color: var(--secondary-colour);
+    background: #fff;
+    border-radius: 7px;
+}
+
+.error {
+    border-color: red;
+    color: white;
+    background: red;
+    border-radius: 7px;
+}
+
+.warning {
+    color: white;
+    background: orange;
+    border-radius: 7px;
+}
+
+.success {
+    border-color: green;
+    color: white;
+    background: green;
+    border-radius: 7px;
+}

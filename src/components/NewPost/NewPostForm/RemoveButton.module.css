@@ -1,0 +1,8 @@
+.removeButton {
+    color: gray;
+    padding-bottom: 2px;
+}
+
+.removeButton:hover {
+    color: black;
+}

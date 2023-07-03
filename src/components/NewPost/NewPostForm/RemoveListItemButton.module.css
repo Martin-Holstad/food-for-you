@@ -1,0 +1,8 @@
+.removeButton {
+    color: gray;
+}
+
+.removeButton:hover {
+    color: black;
+    cursor: pointer;
+}

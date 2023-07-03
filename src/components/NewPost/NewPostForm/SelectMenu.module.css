@@ -1,0 +1,55 @@
+Input.select {
+    width: 100%;
+}
+
+.textareaInput {
+    width: 100%;
+    height: 300px;
+    resize: none;
+    outline: none;
+    font-size: 18px;
+    font-family: var(--primary-font);
+}
+
+.h1Input {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    font-family: var(--primary-font);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.h2Input {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    font-size: 23px;
+    font-family: var(--primary-font);
+}
+
+.h3Input {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    font-size: 20px;
+    font-family: var(--primary-font);
+}
+
+.h4Input {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    font-size: 18px;
+    font-family: var(--primary-font);
+}
+
+.ul {
+    margin: 0px;
+    padding: 0px 0px 0px 18px;
+}
+
+.ol {
+    margin: 0px;
+    padding: 0px 0px 0px 18px;
+}

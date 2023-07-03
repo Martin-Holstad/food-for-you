@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 50px;
+    max-width: 800px;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.links li:hover {
+    text-decoration: underline;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.socialMedia {
+    display: flex;
+    gap: 10px;
+}
+
+
+.socialMedia svg {
+    color: #fff;
+    cursor: pointer;
+}

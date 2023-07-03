@@ -1,0 +1,15 @@
+:root {
+    /*Colour variables*/
+
+    /*Typography variables*/
+    --primary-font: Verdana, Tahoma, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: var(--primary-font);
+}
