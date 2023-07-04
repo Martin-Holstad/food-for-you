@@ -1,16 +1,13 @@
 import styles from "./NewPostForm.module.css";
-import { useState, createElement } from "react";
+import { useState } from "react";
 import SelectMenu from "./SelectMenu";
 import uploadPost from "./uploadPost";
-import handleTextInputValues from "./handleTextInputValues";
-import Dropzone from "../../common/Dropzones/Dropzone";
 import RemoveButton from "./RemoveButton";
 import MoveUpButton from "./MoveUpButton";
 import MoveDownButton from "./MoveDownButton";
-import AddListItem from "./AddListItem";
-import RemoveListItemButton from "./RemoveListItemButton";
-import MoveListItemUpButton from "./MoveListItemUpButton";
-import MoveListItemDownButton from "./MoveListItemDownButton";
+import TextContent from "./TextContent/TextContent";
+import ListContent from "./ListContent/ListContent";
+import FileContent from "./FileContent/FileContent";
 
 export default function NewPostForm() {
   //useStates
@@ -18,11 +15,6 @@ export default function NewPostForm() {
   const [message, setMessage] = useState("");
   const [selectValue, setSelectValue] = useState("");
   const [uniqueId, setUniqueId] = useState(0);
-
-  function getDropzoneFiles(dropzoneFiles, index) {
-    let newFormContent = formContent;
-    newFormContent[index].files = dropzoneFiles;
-  }
 
   return (
     <form
@@ -38,42 +30,13 @@ export default function NewPostForm() {
         {formContent.map(function (content, index) {
           return (
             <div key={content.id} className={styles.contentContainer}>
-              {content.typeOfContent === "text-content"
-                ? createElement(content.element.inputType, {
-                    placeholder: content.element.placeholder,
-                    type: content.element.type,
-                    name: content.element.tag,
-                    className: content.element.className,
-                    id: content.element.id,
-                    onChange: (event) => {
-                      handleTextInputValues(event, index, formContent, setFormContent);
-                    },
-                  })
-                : ""}
+              <h2 className={styles.h2}>{content.element.label}</h2>
 
-              {content.typeOfContent === "list-content" ? (
-                <div>
-                  <AddListItem formContent={formContent} setFormContent={setFormContent} index={index} />
-                  {createElement(
-                    content.element.listType,
-                    { className: content.element.className },
-                    content.element.value.map((val, valIndex) => {
-                      return (
-                        <div key={val.id} className={styles.listActionButtons}>
-                          {createElement(content.element.tag, {}, val.value)}
-                          <MoveListItemUpButton id={val.id} formContent={formContent} setFormContent={setFormContent} index={index} valIndex={valIndex} />
-                          <RemoveListItemButton id={val.id} formContent={formContent} setFormContent={setFormContent} index={index} />
-                          <MoveListItemDownButton id={val.id} formContent={formContent} setFormContent={setFormContent} index={index} valIndex={valIndex} />
-                        </div>
-                      );
-                    })
-                  )}
-                </div>
-              ) : (
-                ""
-              )}
+              {content.typeOfContent === "text-content" ? <TextContent formContent={formContent} setFormContent={setFormContent} content={content} index={index} /> : ""}
 
-              {content.typeOfContent === "file-content" ? <Dropzone index={index} onChange={getDropzoneFiles} /> : ""}
+              {content.typeOfContent === "list-content" ? <ListContent formContent={formContent} setFormContent={setFormContent} content={content} index={index} /> : ""}
+
+              {content.typeOfContent === "file-content" ? <FileContent formContent={formContent} index={index} /> : ""}
 
               <div className={styles.actionButtons}>
                 <MoveUpButton id={content.id} formContent={formContent} setFormContent={setFormContent} index={index} />

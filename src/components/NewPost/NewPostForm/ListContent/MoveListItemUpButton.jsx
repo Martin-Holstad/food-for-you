@@ -1,4 +1,4 @@
-import styles from "./MoveUpButton.module.css";
+import styles from "./MoveListItemUpButton.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
 

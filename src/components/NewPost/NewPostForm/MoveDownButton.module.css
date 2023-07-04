@@ -1,9 +1,8 @@
 .moveDownButton {
-    cursor: pointer;
-    font-size: 20px;
-    color: gray;
-}
-
-.moveDownButton:hover {
-    color: black;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background-color: gray;
+  border-radius: 5px;
 }

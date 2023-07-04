@@ -1,4 +1,4 @@
-import styles from "./MoveDownButton.module.css";
+import styles from "./MoveListItemDownButton.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 

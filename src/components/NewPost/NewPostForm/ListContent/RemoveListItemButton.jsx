@@ -1,4 +1,6 @@
 import styles from "./RemoveListItemButton.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export default function RemoveListItemButton(props) {
   function remove() {
@@ -11,7 +13,7 @@ export default function RemoveListItemButton(props) {
 
   return (
     <div className={styles.removeButton} onClick={remove}>
-      Remove
+      <FontAwesomeIcon icon={faTrash} />
     </div>
   );
 }

@@ -1,9 +1,0 @@
-.moveUpButton {
-    cursor: pointer;
-    font-size: 20px;
-    color: gray;
-}
-
-.moveUpButton:hover {
-    color: black;
-}

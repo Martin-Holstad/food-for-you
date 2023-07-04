@@ -15,6 +15,7 @@ export default function uploadPost(event, formContent, setFormContent, setMessag
     for (const content of formContent) {
       try {
         if (content.typeOfContent === "text-content") {
+          console.log(content.element.value);
           const uploadPost = await push(ref_database(database, postUrl + key + "/" + auth.currentUser.uid), { element: content.element.tag, value: content.element.value, placeholder: content.element.placeholder, type: content.element.type, className: content.element.className, id: content.element.id });
         }
 
